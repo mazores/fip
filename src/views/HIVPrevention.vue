@@ -84,7 +84,7 @@
                     <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
                 </b-col>
             </b-row>
-    </b-container>
+        </b-container>
     </div>
 </template>
 
