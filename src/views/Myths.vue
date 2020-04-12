@@ -63,8 +63,15 @@
 
                         <h3>Learn More</h3>
                         <!-- MAKE LINKS DYNAMIC -->
-                        <router-link to="#">{{ myth.linkname1 }}</router-link><br>
-                        <a href="#">{{ myth.linkname2 }}</a>
+                        <router-link to="#">
+                            {{ myth.linkname1 }}
+                            <img src="@/assets/icon-forward.svg" alt="Arrow pointing right"> 
+                            
+                        </router-link><br>
+                        <a href="#">
+                            {{ myth.linkname2 }}
+                            <img src="@/assets/icon-forward.svg" alt="Arrow pointing right"> 
+                        </a>
 
                     </div>
                 </div>
@@ -193,6 +200,7 @@ import gettested from "@/components/GetTested";
 </script>
 
 <style lang="scss">
+// MODAL
 .modal-backdrop {
   opacity: 0.9 !important;
   background-color: #ffcc67 !important;
@@ -235,7 +243,6 @@ import gettested from "@/components/GetTested";
   }
 }
 
-
 .mythsfactsContainer {
     display: flex;
     flex-direction: column;
@@ -250,14 +257,18 @@ import gettested from "@/components/GetTested";
     a { color: $red; text-decoration: underline;}
 
     .factsContent {
-
+        img {
+            margin-left: 10px;
+        }
     }
+
     .mythContent,
     .factsContent {
         padding: 0 30px;
     }
 }
 
+// VIDEO IN MODAL
 .videoCont {
     position: relative;
     width: 100%;
@@ -270,7 +281,6 @@ import gettested from "@/components/GetTested";
         margin: 0 auto;
     }
 }
-
 </style>
 
 <style lang="scss" scoped>
@@ -290,6 +300,7 @@ import gettested from "@/components/GetTested";
     }
 }
 
+// DIFF COLORS
 .mythsbuttons:nth-child(1),
 .mythsbuttons:nth-child(9) {
     background-color: $purple;
