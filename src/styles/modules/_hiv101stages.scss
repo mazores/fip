@@ -1,0 +1,40 @@
+#stage-two {
+    background-color: $red;
+    color: white;
+}
+
+.hiv-stages {
+    width: 100%;
+    color: $red;
+
+    .stages-title {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    }
+}
+
+.symptoms {
+    .symptoms-img {
+        margin-bottom: 15px;
+        img {
+            height: 64px;
+        }
+    }
+
+    h6 {
+        color: $red;
+        font-size: 12px;
+    }
+}
