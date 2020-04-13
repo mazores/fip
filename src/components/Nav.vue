@@ -27,21 +27,21 @@
                 </div>
 
                 <div class="learn-button" id="learn-prevent" @click="toggleMenu(); toggleLearnMore(); toggleArrow(); toggleArrowRotate()">
-                    <router-link to="/hiv-prevent" tag="li">
+                    <router-link to="/hiv-prevention" tag="li">
                     <h5>Prevention</h5>
                     <img src="@/assets/hiv-prevention.svg" alt="HIV prevention"> 
                     </router-link>
                 </div>
 
                 <div class="learn-button" id="learn-myths" @click="toggleMenu(); toggleLearnMore(); toggleArrow(); toggleArrowRotate()">
-                    <router-link to="hiv-myths-and-facts" tag="li">
+                    <router-link to="/hiv-myths-and-facts" tag="li">
                     <h5>Myths</h5>
                     <img src="@/assets/hiv-myth.svg" alt="HIV myths">
                     </router-link>
                 </div>
 
                 <div class="learn-button" id="learn-living" @click="toggleMenu(); toggleLearnMore(); toggleArrow(); toggleArrowRotate()">
-                    <router-link to="hiv-living" tag="li">
+                    <router-link to="/hiv-living" tag="li">
                     <h5>Living with HIV</h5>
                     <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
                     </router-link>
@@ -82,29 +82,29 @@
 
         <div class="nav-open" id="get-to-know" v-bind:class="{ scrolldown: isLearnMoreActive }">
             <div class="learn-more-menu">
-                <div class="learn-button" id="learn-101">
+                <div class="learn-button" id="learn-101" @click="toggleLearnMore()">
                     <router-link to="/hiv-101" tag="li">
                     <h5>HIV 101</h5>
                     <img src="@/assets/hero-hiv101.svg" alt="HIV 101"> 
                     </router-link>
                 </div>
 
-                <div class="learn-button" id="learn-prevent">
-                    <router-link to="/hiv-prevent" tag="li">
+                <div class="learn-button" id="learn-prevent" @click="toggleLearnMore()">
+                    <router-link to="/hiv-prevention" tag="li">
                     <h5>Prevention</h5>
                     <img src="@/assets/hiv-prevention.svg" alt="HIV prevention"> 
                     </router-link>
                 </div>
 
-                <div class="learn-button" id="learn-myths">
-                    <router-link to="hiv-myths-and-facts" tag="li">
+                <div class="learn-button" id="learn-myths" @click="toggleLearnMore()">
+                    <router-link to="/hiv-myths-and-facts" tag="li">
                     <h5>Myths</h5>
                     <img src="@/assets/hiv-myth.svg" alt="HIV myths">
                     </router-link>
                 </div>
 
-                <div class="learn-button" id="learn-living">
-                    <router-link to="hiv-living" tag="li">
+                <div class="learn-button" id="learn-living" @click="toggleLearnMore()">
+                    <router-link to="/hiv-living" tag="li">
                     <h5>Living with HIV</h5>
                     <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
                     </router-link>
@@ -264,6 +264,7 @@
 
 @media screen and (min-width: 768px) {
     .mobile-nav, .mobile-nav-open { display: none }; 
+    .nav-open { display: block; }
     .scrolldown { transform: translateY(208px); }
 
     .nav {
@@ -325,38 +326,38 @@
     }
 
     #get-to-know {
-    // right: -100vw;
-    z-index: 200;
-    // transition: transform 1s ease-in-out 0.1s;
-    transition: transform 1s ease-in-out 0.1s;
-
-
-    img.back {
-        transform: rotate(-180deg);
-        margin-right: 10px;
+        // right: -100vw;
+        // transition: transform 1s ease-in-out 0.1s;
         transition: transform 1s ease-in-out 0.1s;
-    }
 
-    .learn-more-menu {
-        top: -208px;
-        background-color: white;
-        width: 100vw;
-        position: fixed;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-around;
-        margin-top: 0;
-        padding: 20px;
-        -webkit-box-shadow: 0px 4px 33px -15px rgba(0,0,0,0.36);
-        -moz-box-shadow: 0px 4px 33px -15px rgba(0,0,0,0.36);
-        box-shadow: 0px 4px 33px -15px rgba(0,0,0,0.36);
 
-        .learn-button {
-            width: 25%;
-            margin: 20px;
-            padding: 20px;
-            margin-bottom: 15px;
+        img.back {
+            transform: rotate(-180deg);
+            margin-right: 10px;
+            transition: transform 1s ease-in-out 0.1s;
         }
+
+        .learn-more-menu {
+            position: fixed;
+            z-index: 200;
+            top: -208px;
+            background-color: white;
+            width: 100vw;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 20px;
+            -webkit-box-shadow: 0px 4px 33px -15px rgba(0,0,0,0.36);
+            -moz-box-shadow: 0px 4px 33px -15px rgba(0,0,0,0.36);
+            box-shadow: 0px 4px 33px -15px rgba(0,0,0,0.36);
+
+            .learn-button {
+                width: 25%;
+                margin: 20px;
+                padding: 20px;
+                margin-bottom: 15px;
+            }
     }
 }
 }
