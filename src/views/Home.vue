@@ -118,17 +118,20 @@
     <div class="cta">
       <h1>It's about time we got to know each other.</h1>
     </div>
+
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    // HelloWorld
+    Footer
   }
 };
 </script>
@@ -136,6 +139,7 @@ export default {
 <style lang="scss">
 .cta {
   padding: 0 35px 30px 35px;
+  margin-bottom: 10px;
   color: $red;
   
   h1 {

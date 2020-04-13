@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Nav />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/hiv-101">HIV 101</router-link>
@@ -8,6 +9,15 @@
   </div>
 </template>
 
+<script>
+import Nav from "@/components/Nav.vue";
+
+export default {
+  components: { 
+    Nav 
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: 'Nunito', sans-serif;

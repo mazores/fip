@@ -103,15 +103,17 @@
             </b-col>
         </b-row>
         </b-container>
+    <Footer />
     </div>
 </template>
 
 <script>
 import gettested from "@/components/GetTested";
+import Footer from "@/components/Footer";
 
     export default {
         name: "myths",
-        components: { gettested },
+        components: { gettested, Footer },
         data() {
             return {
                 myths: [

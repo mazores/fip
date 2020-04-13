@@ -147,16 +147,20 @@
 
             </b-row>
         </b-container>
+
+        <Footer />
     </div>
  </template>
  
 <script>
 import gettested from "@/components/GetTested";
+import Footer from "@/components/Footer";
 
     export default {
         name: "livingwithhiv",
         components: {
-            gettested
+            gettested,
+            Footer
         }
     }
 </script>
