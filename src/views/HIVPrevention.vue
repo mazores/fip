@@ -85,18 +85,22 @@
                 </b-col>
             </b-row>
         </b-container>
+
+    <Footer />
     </div>
 </template>
 
 <script>
 import prevention from "@/components/HIVPrevention";
 import gettested from "@/components/GetTested";
+import Footer from "@/components/Footer";
 
     export default {
         name: "hivprevention",
         components: {
             prevention,
-            gettested
+            gettested,
+            Footer
         },
         data() {
             return {

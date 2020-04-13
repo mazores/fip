@@ -64,6 +64,8 @@
         </b-col>
       </b-row>
     </b-container>
+
+    <Footer />
   </div>
 </template>
 
@@ -72,6 +74,7 @@ import stageone from "@/components/HIV101StageOne";
 import stagetwo from "@/components/HIV101StageTwo";
 import stagethree from "@/components/HIV101StageThree";
 import gettested from "@/components/GetTested";
+import Footer from "@/components/Footer";
 
   export default {
     name: "HIV101",
@@ -79,7 +82,8 @@ import gettested from "@/components/GetTested";
       stageone,
       stagetwo,
       stagethree,
-      gettested
+      gettested,
+      Footer
     },
     data() {
       return {
