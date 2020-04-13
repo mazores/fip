@@ -25,7 +25,7 @@
            line-height: 50px!important;
            color: $yellow;
         }
-
+ 
         h5 {
             font-family: $Nunito;
             font-size: 12px;
@@ -59,10 +59,21 @@
 .container { max-width: initial;}
 .learn-more {
     width: 100vw;
+
     .learn-button {
         img {
             width: 100%;
         }
     }
 }
+}
+
+@media screen and (min-width: 1024px) {
+    .learn-more {
+        .learn-button {
+            h5 {
+                font-size: 20px!important;
+            }
+        }
+    }
 }

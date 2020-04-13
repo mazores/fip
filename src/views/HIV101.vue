@@ -43,31 +43,25 @@
 
     <!-- LEARN MORE -->
     <b-container class="learn-more">
-      <b-row class="px-5 justify-content-center">
-        <b-col cols="12" md="4" class="learn-button my-3" id="learn-text">
+      <b-row class="px-5 px-md-3 py-md-5 justify-content-center">
+        <b-col cols="12" md="2" class="learn-button my-3 mr-md-1" id="learn-text">
           <h1>Learn More</h1>
         </b-col>
         
-        <router-link to="/hiv-prevention" tag="li">
-        <b-col cols="12" md="4" class="learn-button my-3" id="learn-prevent">
+        <b-col cols="12" md="3" class="learn-button my-3 mx-md-2" id="learn-prevent">
           <h5>Prevention</h5>
           <img src="@/assets/hiv-prevention.svg" alt="HIV prevention"> 
         </b-col>
-        </router-link>
 
-        <router-link to="/hiv-myths-and-facts" tag="li">
-        <b-col cols="12" md="4" class="learn-button my-3" id="learn-myths">
+        <b-col cols="12" md="3" class="learn-button my-3 mx-md-2" id="learn-myths">
           <h5>Myths</h5>
           <img src="@/assets/hiv-myth.svg" alt="HIV myths">
         </b-col>
-        </router-link>
 
-        <router-link to="/hiv-living" tag="li">
-        <b-col cols="12" md="4" class="learn-button my-3" id="learn-living">
+        <b-col cols="12" md="3" class="learn-button my-3 mx-md-2" id="learn-living">
           <h5>Living with HIV</h5>
             <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
         </b-col>
-        </router-link>
       </b-row>
     </b-container>
 
