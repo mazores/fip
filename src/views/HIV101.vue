@@ -44,24 +44,30 @@
     <!-- LEARN MORE -->
     <b-container class="learn-more">
       <b-row class="px-5 justify-content-center">
-        <b-col cols="10" class="learn-button my-3" id="learn-text">
+        <b-col cols="12" md="4" class="learn-button my-3" id="learn-text">
           <h1>Learn More</h1>
         </b-col>
         
-        <b-col cols="10" class="learn-button my-3" id="learn-prevent">
+        <router-link to="/hiv-prevention" tag="li">
+        <b-col cols="12" md="4" class="learn-button my-3" id="learn-prevent">
           <h5>Prevention</h5>
           <img src="@/assets/hiv-prevention.svg" alt="HIV prevention"> 
         </b-col>
+        </router-link>
 
-        <b-col cols="10" class="learn-button my-3" id="learn-myths">
+        <router-link to="/hiv-myths-and-facts" tag="li">
+        <b-col cols="12" md="4" class="learn-button my-3" id="learn-myths">
           <h5>Myths</h5>
           <img src="@/assets/hiv-myth.svg" alt="HIV myths">
         </b-col>
+        </router-link>
 
-        <b-col cols="10" class="learn-button my-3" id="learn-living">
+        <router-link to="/hiv-living" tag="li">
+        <b-col cols="12" md="4" class="learn-button my-3" id="learn-living">
           <h5>Living with HIV</h5>
             <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
         </b-col>
+        </router-link>
       </b-row>
     </b-container>
 
@@ -198,6 +204,7 @@ import Footer from "@/components/Footer";
 </script>
 
 <style lang="scss" scoped>
+
 #hiv {
   background-color: #44C3E8;
   z-index: -5;
@@ -246,6 +253,58 @@ import Footer from "@/components/Footer";
 
     img {
       width: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hiv-info {
+    padding: 100px 70px;
+    flex-direction: row;
+    align-items: center;
+
+    .col-text {
+      width: 60%;
+    }
+
+    .col-img {
+      width: 40%;
+      text-align: center;
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  #hiv {
+    .col-text {
+      order: 1;
+    }
+
+    .col-img {
+      order: 2;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hiv-info {
+    padding: 150px 150px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hiv-info {
+    padding: 150px 250px;
+  }   
+}
+
+@media screen and (min-width: 1024px) {
+  .hiv-info {
+    justify-content: space-between;
+    .col-text {
+      width: 50%;
     }
   }
 

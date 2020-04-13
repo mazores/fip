@@ -158,10 +158,10 @@
 }
 
 .mobile-nav {
-    background-color: white;
-    width: 100vw;
     z-index: 300;
     position: fixed;
+    background-color: white;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -229,6 +229,8 @@
 }
 
 .mobile-nav-open {
+    position: fixed;
+    z-index: 1;
     height: 100vh;
     width: 100vw;
     right: -100vw;
@@ -239,8 +241,6 @@
     align-items: flex-end;
     text-align: right;
     padding: 0 30px;
-    position: fixed;
-    z-index: 1;
     transition: right 1s ease-in-out 0.1s;
 
     ul {
@@ -268,10 +268,10 @@
     .scrolldown { transform: translateY(208px); }
 
     .nav {
+        position: relative;
+        z-index: 300;
         background-color: white;
         width: 100vw;
-        z-index: 300;
-        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;

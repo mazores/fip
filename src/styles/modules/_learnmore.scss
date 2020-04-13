@@ -6,7 +6,11 @@
     margin-top: -50px;
     z-index: 10;
     position: relative;
+    padding-bottom: 30px;
 
+    li {
+        list-style-type: none;
+    }
     .learn-button {
         display: flex;
         flex-direction: column;
@@ -49,4 +53,16 @@
 
 #learn-living {
     background-color: #6FCFEB;
+}
+
+@media screen and (min-width: 768px) {
+.container { max-width: initial;}
+.learn-more {
+    width: 100vw;
+    .learn-button {
+        img {
+            width: 100%;
+        }
+    }
+}
 }

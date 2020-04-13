@@ -18,6 +18,8 @@
 
 <style lang="scss" scoped>
     .footer {
+        position: relative;
+        z-index: 3;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,7 +83,7 @@
         ul.social {
             li {
                 margin: 0 10px;
-                
+
                 img {
                     width: 80%;
                 }
