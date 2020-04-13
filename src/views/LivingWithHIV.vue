@@ -60,10 +60,10 @@
         </div>
 
 
-        <b-container class="living mt-5">
+        <b-container class="living mt-5 py-md-5 px-md-5">
             <b-row class="justify-content-center px-4">
                 <!-- TREATMENT -->
-                <b-col class="col-text" id="treatment" cols="12">
+                <b-col class="col-text pr-md-5" id="treatment" cols="12" md="7" lg="6">
                     <h3 class="light">HIV Treatment</h3>
                     <h2>You can still live life</h2>
                     <p>
@@ -72,16 +72,16 @@
                     </p>
                 </b-col>
 
-                <b-col class="col-image" id="treatment-image">
+                <b-col class="col-image" id="treatment-image" md="5" lg="6">
                     <img src="@/assets/life-happy.svg" alt="Happy person surrounded by characters">
                 </b-col>
             </b-row>
         </b-container>
 
-        <b-container class="living mt-5">
+        <b-container class="living mt-5 pb-md-5 px-md-5" id="dating-content">
             <b-row class="justify-content-center px-4">
                 <!-- DATING -->
-                <b-col class="col-text" id="dating" cols="12">
+                <b-col class="col-text pl-md-5" id="dating" cols="12" md="7" lg="6">
                     <h3 class="light">Dating with HIV</h3>
                     <h2>You can still love and have sex.</h2>
                     <p>
@@ -100,15 +100,15 @@
                     </p>
                 </b-col>
 
-                <b-col class="col-image" id="dating-image" cols="12">
+                <b-col class="col-image" id="dating-image" cols="12" md="5" lg="6">
                     <img src="@/assets/life-love.svg" alt="Happy person surrounded by characters">
                 </b-col>
             </b-row>
         </b-container>
 
-        <b-container class="living my-5">
-            <b-row class="justify-content-center px-4">
-                <b-col class="col-text" id="pregnancy" cols="12">
+        <b-container class="living my-5 pb-md-5 px-md-5">
+            <b-row class="justify-content-center justify-content-md-center align-v-md-center px-4">
+                <b-col class="col-text" id="pregnancy" cols="12" md="7" lg="6">
                     <h3 class="light">Pregnancy with HIV</h3>
                     <h2>You can still have healthy babies.</h2>
                     <p>
@@ -116,7 +116,7 @@
                     </p>
                 </b-col>
 
-                <b-col class="col-image" id="pregnant-image" cols="12">
+                <b-col class="col-image" id="pregnant-image" cols="12" md="5" lg="6">
                     <img src="@/assets/life-pregnant.svg" alt="Happy person surrounded by characters">
                 </b-col>
             </b-row>
@@ -223,6 +223,7 @@ import Footer from "@/components/Footer";
 
     .col-image {
         order: 1;
+        text-align: center;
         img {
             width: 250px;
             padding: 30px 0;
@@ -236,4 +237,86 @@ import Footer from "@/components/Footer";
         width: 150px;
     }
  }
+
+@media screen and (min-width: 768px) {
+    .steps-section {
+        flex-direction: row;
+        padding: 130px 80px 50px 80px;
+        
+        .steps-title {
+            width: 40%;
+            padding-right: 50px;
+        }
+
+        .steps-content-section {
+            width: 60%;
+            padding-left: 30px;
+            border-left: 5px $red solid;
+            
+        }
+    }
+
+    .living {
+        .col-text {
+            order: 1;
+        }
+
+        .col-image {
+            width: 100%!important;
+            order: 2;
+        }
+    }
+
+    #dating-content {
+        .col-text {
+            order: 2!important;
+        }
+
+        .col-image {
+            order: 1!important;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .living {
+        padding: 50px 100px;
+
+        .col-image {
+            img {
+                width: 100%!important;
+            }
+        }
+    }
+
+    #dating-content {
+        .col-image {
+            padding-right: 10px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .steps-section {
+        flex-direction: row;
+        padding: 130px 200px 100px 200px;
+        
+        .steps-title {
+            width: 40%;
+            padding-right: 50px;
+        }
+
+        .steps-content-section {
+            width: 50%;
+            padding-top: 80px;
+            padding-left: 100px;
+            border-left: 5px $red solid;
+        }
+    }
+
+    .living {
+        padding: 30px 200px!important;
+    }
+}
  </style>
