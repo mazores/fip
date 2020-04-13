@@ -12,8 +12,8 @@
         </section>
 
         <b-container>
-            <b-row class="px-5">
-                <b-col class="mythsbuttons px-3 py-3 my-3" cols="12" v-for="myth in myths" :key="myth.id" v-bind:myth="myths">
+            <b-row class="px-5 p-md-3 my-lg-5 justify-content-center">
+                <b-col class="mythsbuttons px-3 py-3 my-3 mx-md-4 m-lg-3 p-lg-3" cols="12" md="3" v-for="myth in myths" :key="myth.id" v-bind:myth="myths">
                     <div v-if="myth.image">
                         <img :src="require(`@/assets/${myth.image}`)">
                     </div>
@@ -50,18 +50,18 @@
 
                 <div class="mythsfactsContainer">
                     <div class="mythContent">
-                        <h3>Myths</h3>
-                        <h2>{{ myth.myth }}</h2>
+                        <h3 class="mythsfacts">Myths</h3>
+                        <h2 class="mythsfacts">{{ myth.myth }}</h2>
                     </div>
 
                     <div class="factsContent">
-                        <h3>Facts</h3>
-                        <h2>{{ myth.fact }}</h2>
+                        <h3 class="mythsfacts">Facts</h3>
+                        <h2 class="mythsfacts">{{ myth.fact }}</h2>
                         <p>
                             {{ myth.description }}
                         </p>
 
-                        <h3>Learn More</h3>
+                        <h3 class="mythsfacts">Learn More</h3>
                         <!-- MAKE LINKS DYNAMIC -->
                         <router-link to="#">
                             {{ myth.linkname1 }}
@@ -283,6 +283,34 @@ import Footer from "@/components/Footer";
         margin: 0 auto;
     }
 }
+
+@media screen and (min-width: 768px) {
+.mythsfactsContainer {
+    h3.mythsfacts {
+        font-size: 13px!important;
+    }
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    h2 {
+        font-size: 24px!important;
+    }
+}
+}
+
+@media screen and (min-width: 1024px) {
+.mythsfactsContainer {
+    h2.mythsfacts {
+        font-size: 36px!important;
+    }
+
+    .mythContent,
+    .factsContent {
+        padding: 0 50px;
+    }
+}
+}
 </style>
 
 <style lang="scss" scoped>
@@ -296,6 +324,7 @@ import Footer from "@/components/Footer";
     align-items: center;
     justify-content: center;
     color: white;
+    text-align: center;
 
     img.icon {
         margin-top: 10px;
@@ -321,5 +350,32 @@ import Footer from "@/components/Footer";
 
 .mythsbuttons:nth-child(6) {
     background-color: $blue;
+}
+
+@media screen and (min-width: 768px) {
+.mythsbuttons {
+    // padding: 10px 20px!important;
+    // width: 200px!important;
+    width: initial!important;
+    // -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    // -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    // box-sizing: border-box;         /* Opera/IE 8+ */
+
+    h1 {
+        font-size: 24px!important;
+        line-height: 25px!important;
+    }
+}
+}
+
+@media screen and (min-width: 1280px) {
+.mythsbuttons {
+    height: 430px!important;
+
+    h1 {
+        font-size: 36px!important;
+        line-height: 37px!important;
+    }
+}
 }
 </style>
