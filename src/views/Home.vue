@@ -210,4 +210,39 @@ export default {
 .padding-none {
   padding: 0;
 }
+
+@media screen and (min-width: 1024px) {
+.masonry {
+  padding: 50px!important;
+
+  .cardClass {
+    padding: 20px!important;
+  }
+
+  h1 {
+      font-size: 60px!important;
+      line-height: 60px!important;
+  }
+
+  h4 {
+    font-size: 40px!important;
+  }
+}
+
+.cta {
+  h1 {
+    font-size: 45px!important;
+    line-height: 50px!important;
+  }
+}
+}
+
+@media screen and (min-width: 1280px) {
+.cta {
+  h1 {
+    font-size: 60px!important;
+    line-height: 60px!important;
+  }
+}
+}
 </style>

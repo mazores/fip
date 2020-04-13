@@ -82,22 +82,22 @@
 
         <!-- LEARN MORE -->
         <b-container class="learn-more">
-        <b-row class="px-5 justify-content-center">
-            <b-col cols="10" class="learn-button my-3" id="learn-text">
+        <b-row cclass="px-5 px-md-3 py-md-5 justify-content-center">
+            <b-col cols="12" md="2" class="learn-button my-3 mr-md-1" id="learn-text">
             <h1>Learn More</h1>
             </b-col>
 
-            <b-col cols="10" class="learn-button my-3" id="learn-101">
+            <b-col cols="12" md="3" class="learn-button my-3 mx-md-2" id="learn-101">
                 <h5>HIV 101</h5>
                 <img src="@/assets/hero-hiv101.svg" alt="HIV 101">
             </b-col>
             
-            <b-col cols="10" class="learn-button my-3" id="learn-prevent">
+            <b-col cols="12" md="3" class="learn-button my-3 mx-md-2" id="learn-prevent">
                 <h5>Prevention</h5>
                 <img src="@/assets/hiv-prevention.svg" alt="HIV prevention"> 
             </b-col>
 
-            <b-col cols="10" class="learn-button my-3" id="learn-living">
+            <b-col cols="12" md="3" class="learn-button my-3 mx-md-2" id="learn-living">
                 <h5>Living with HIV</h5>
                 <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
             </b-col>
