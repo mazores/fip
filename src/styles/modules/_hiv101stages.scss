@@ -26,6 +26,9 @@
 }
 
 .symptoms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .symptoms-img {
         margin-bottom: 15px;
         img {
@@ -36,5 +39,69 @@
     h6 {
         color: $red;
         font-size: 12px;
+        text-align: center;
     }
+}
+
+@media screen and (min-width: 768px) {
+.hiv-stages {
+    .stages-title {
+        padding: 70px;
+
+        .col-desc {
+            width: 70%;
+        }
+    }
+}
+
+.symptoms {
+    .symptoms-img {
+        img {
+            height: 100px;
+        }
+    }
+
+    h6 {
+        font-size: 20px;
+        width: 60%;
+    }
+}
+}
+
+@media screen and (min-width: 1024px) {
+.hiv-stages {
+    .stages-title {
+        flex-direction: row;
+        padding: 100px 150px;
+    }
+}
+
+#stage-two {
+    .stages-title {
+        .col-title {
+            order: 2;
+            text-align: right;
+        }
+
+        .col-desc {
+            order: 1;
+        }
+    }
+}
+}
+
+@media screen and (min-width: 1024px) {
+.hiv-stages {
+    .stages-title {
+        justify-content: space-between;
+
+        .col-title {
+
+        }
+
+        .col-desc {
+            width: 45%;
+        }
+    }
+}
 }

@@ -30,8 +30,8 @@
         </section>
 
             <b-container>
-                <b-row class="px-3">
-                    <b-col class="symptoms px-1 pb-5" cols="4" v-for="risk in risks" :key="risk.id" v-bind:risk="risks">
+                <b-row class="px-3 px-xl-5">
+                    <b-col class="symptoms px-1 pb-5" cols="4" lg="3" v-for="risk in risks" :key="risk.id" v-bind:risk="risks">
                         <div class="symptoms-img">
                             <img :src="require(`@/assets/risk-${risk.image}`)">
                         </div>
@@ -47,8 +47,8 @@
         </section>
 
             <b-container>
-                <b-row class="px-3">
-                    <b-col class="symptoms px-1 pb-5" cols="4" v-for="notrisk in notrisks" :key="notrisk.id" v-bind:notrisk="risks">
+                <b-row class="px-3 px-xl-5 mt-xl-5">
+                    <b-col class="symptoms px-1 px-lg-0 pb-5" cols="4" lg="3" v-for="notrisk in notrisks" :key="notrisk.id" v-bind:notrisk="risks">
                         <div class="symptoms-img">
                             <img :src="require(`@/assets/risk-${notrisk.image}`)">
                         </div>
@@ -59,30 +59,37 @@
             </b-container>
         
         <!-- PREVENT -->
-        <prevention v-bind:preventions="preventions"/>
+        <prevention class="prevent-padding" v-bind:preventions="preventions"/>
         <gettested />
 
         <!-- LEARN MORE -->
         <b-container class="learn-more">
             <b-row class="px-5 justify-content-center">
-                <b-col cols="10" class="learn-button my-3" id="learn-text">
+                
+                <b-col cols="12" class="learn-button my-3" id="learn-text">
                 <h1>Learn More</h1>
                 </b-col>
                 
-                <b-col cols="10" class="learn-button my-3" id="learn-101">
-                <h5>Prevention</h5>
+                <router-link to="/hiv-101" tag="li">
+                <b-col cols="12" class="learn-button my-3" id="learn-101">
+                <h5>HIV 101</h5>
                 <img src="@/assets/hero-hiv101.svg" alt="HIV prevention"> 
                 </b-col>
+                </router-link>
 
-                <b-col cols="10" class="learn-button my-3" id="learn-myths">
+                <router-link to="/hiv-myths-and-facts" tag="li">
+                <b-col cols="12" class="learn-button my-3" id="learn-myths">
                 <h5>Myths</h5>
                 <img src="@/assets/hiv-myth.svg" alt="HIV myths">
                 </b-col>
+                </router-link>
 
-                <b-col cols="10" class="learn-button my-3" id="learn-living">
+                <router-link to="/hiv-living" tag="li">
+                <b-col cols="12" class="learn-button my-3" id="learn-living">
                 <h5>Living with HIV</h5>
                     <img src="@/assets/hiv-living.svg" alt="Living with HIV"> 
                 </b-col>
+                </router-link>
             </b-row>
         </b-container>
 
@@ -228,6 +235,42 @@ import Footer from "@/components/Footer";
         color: $red;
         text-align: left;
         letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .risks {
+        padding: 35px 70px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #hiv-risks {
+        .stages-title {
+            padding: 100px 70px;
+            align-items: center;
+
+            .col-title {
+                width: 70%;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .prevent-padding {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #hiv-risks {
+        .stages-title {
+            padding: 100px 150px;
+        }
+    }
+
+    .risks {
+        padding: 50px 150px;
     }
 }
 </style>

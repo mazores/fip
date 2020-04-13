@@ -4,8 +4,9 @@
     flex-direction: column;
     align-items: center;
     border-radius: 0 0 50px 50px;
-    padding: 30px 70px;
+    padding: 130px 70px 30px 70px;
     z-index: 5;
+    text-align: center;
 
     .herotext {
         color: #FFFFFF;
@@ -35,3 +36,35 @@
 #hivprevention { background-color: #9164CC; }
 #hivmyths { background-color: #FF5100; }
 #hivliving { background-color: #6FCFEB; }
+
+@media screen and (min-width: 768px) {
+    .hero {
+        flex-direction: row!important;
+        justify-content: space-between!important;
+        padding: 60px 70px!important;
+
+        .herotext {
+            text-align: left;;
+
+            h1 {
+                font-size: 60px!important;
+                line-height: 60px!important;
+            }
+        }
+        
+        .heroimage {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        .herotext {
+            h1 {
+                font-size: 80px!important;
+                line-height: 80px!important;
+            }
+        }
+    }
+}

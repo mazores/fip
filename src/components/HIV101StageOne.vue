@@ -13,8 +13,8 @@
         </div>
 
         <b-container>
-            <b-row class="px-3">
-                <b-col class="symptoms px-1 pb-5" cols="4" v-for="symptom in onesymptoms" :key="symptom.id" v-bind:symptom="onesymptoms">
+            <b-row class="px-3 px-lg-0">
+                <b-col class="symptoms px-1 px-lg-0 pb-5" cols="4" lg="3" v-for="symptom in onesymptoms" :key="symptom.id" v-bind:symptom="onesymptoms">
                     <div class="symptoms-img">
                         <img :src="require(`@/assets/symptoms-${symptom.image}`)">
                     </div>

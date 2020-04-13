@@ -152,6 +152,8 @@ export default {
 }
 .masonry {
   padding: 50px 50px 10px 50px;
+  position: relative;
+  z-index: -1;
 
   .cardClass {
     border: 0 none!important;
