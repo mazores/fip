@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <img src="@/assets/logo.svg" alt="Meet HIV Logo"> 
+        <img src="@/assets/logo.svg" alt="Meet HIV Logo" class="logo"> 
         <h3>A campaign By Regional HIV/AIDS Connection</h3>
         <ul class="social">
             <li><a href="#"><img src="@/assets/icon-facebook.svg" alt="Facebook icon"></a></li>
@@ -45,4 +45,49 @@
             }
         }
     }
+
+@media screen and (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        padding: 35px 40px;
+
+        img.logo {
+            width: 25%;
+        }
+
+        h3 {
+            font-size: 14px;
+            width: 30%;
+        }
+        
+        ul.social {
+            li {
+                margin: 0 5px;
+                img {
+                    width: 60%; 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        h3 {
+            width: 40%;
+            font-size: 20px;
+        }
+
+        ul.social {
+            li {
+                margin: 0 10px;
+                
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
 </style>
